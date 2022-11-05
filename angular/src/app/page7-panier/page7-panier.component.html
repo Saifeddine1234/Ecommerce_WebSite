@@ -1,0 +1,129 @@
+
+<app-pub-haut></app-pub-haut>
+<app-navbar></app-navbar>
+<section class="h-100 h-custom" >
+    <div class="container py-2 h-100" *ngIf="mVide == true">    
+<br>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body p-4">
+  
+              <div class="row">
+  
+                <div class="col-lg-7">
+                  <h5 class="mb-3"><a href="get_produit" class="text-body">Panier</a></h5>
+                  <hr>
+  
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                      <p class="mb-0"><span class="text-muted">Sort by:</span> <a  (click)="sort()"
+                          class="text-body"> Prix <i class="fas fa-angle-down mt-1"></i></a></p>
+                    </div>
+                  </div>
+  
+                  <div class="card mb-3" *ngFor="let i of panierfinal ;  let index = index;">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between"    >
+                        <div class="d-flex flex-row align-items-center">
+                          <div>
+                            <img
+                              src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                              class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                          </div>
+                          <div class="ms-3 ml-5">
+                            <p>{{i.nomProduit}}</p>
+                            <p class="small mb-0"></p>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center">
+                          <div  style="width: 50px;">
+                            <h5 class="fw-normal mb-0">1</h5>
+                          </div>
+                          <div style="width: 120px;">
+                            <h5 class="mb-0">{{i.prixProduit - i.prixProduit * i.remiseProduit / 100 }}  DT
+                            </h5>
+                          </div>
+                          <a href="panier" (click)="delete(index)" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+                <div class="col-lg-5">
+  
+                  <div class="card bg-primary text-white rounded-3">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h5 class="mb-0">RÉSUMÉ DU PANIER</h5>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+                          <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="mb-0">Il exist {{count}} objets dans le panier</p>
+                      </div>
+  
+                      <hr class="my-4">
+  
+                      <div class="d-flex justify-content-between">
+                        <p class="mb-2">Subtotal</p>
+                        <p class="mb-2"><b>{{total}} DT</b></p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between">
+                        <p class="mb-2">frais de livraison</p>
+                        <p class="mb-2"><b>8.00 DT</b></p>
+                      </div>
+  
+                      <div class="d-flex justify-content-between mb-4">
+                        <p class="mb-2">Total(Incl. taxes)</p>
+                        <p class="mb-2"><b>{{total_plus}} DT</b></p>
+                      </div>
+  
+                      <button type="button" class="btn btn-info btn-block btn-lg">
+                        <div class="d-flex justify-content-between">
+                          <span>{{total_plus}} DT</span>
+                          <span (click) = "commander()">Commander <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
+                        </div>
+                      </button>
+  
+                    </div>
+                  </div>
+  
+                </div>
+  
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container py-2 h-100" *ngIf="mVide == false">    
+      <br>
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body p-4">
+        
+                    <div class="row">
+        
+                      <div class="col">
+                        <h5 class="mb-3"><a href="get_produit" class="text-body">Panier</a></h5>
+                        <hr>
+                        <div class="d-flex justify-content-center align-items-center mb-4">
+                          <div><h1>Panier Vide !</h1>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  </section>

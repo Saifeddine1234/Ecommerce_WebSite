@@ -1,0 +1,272 @@
+<app-pub-haut></app-pub-haut>
+<app-navbar></app-navbar>
+<section class="h-100 h-custom">
+  <div class="container   py-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">      
+        <div class="card">
+          <div class="card-body p-4">
+            <div class="row">
+              <div class="col-lg-3 mb-2" >
+                  <div class="card bg-light text-white rounded-3" style="transition: box-shadow .7s ease;">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <app-navbar-h></app-navbar-h>
+                      </div> 
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-7 mb-2 ss" style="transition: box-shadow .7s ease;">
+                <div class="card bg-light text-white rounded-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <app-pub></app-pub>
+                  </div>
+                </div> 
+              </div>
+              <div class="col-lg-2 mb-2" >
+                <div class="card bg-light text-white rounded-3">
+                  <div class="car-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <app-pub2></app-pub2>
+
+                    </div>   
+                  </div>
+                </div> 
+                <br>
+                <div class="card">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <app-pub1></app-pub1>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="h-100 h-custom" >
+  <div class="container  py-2  h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">      
+        <div class="card">
+          <div class="card-body p-4">
+<div class="row ">
+  <div style=" height: 80px;" class="col-3 ss">
+    <app-comp></app-comp>
+    </div>
+    <div style=" height: 80px;" class="col-3 ss">
+      <app-comp></app-comp>
+      </div>
+      <div style=" height: 82px;" class="col-3 ss">
+        <app-comp></app-comp>
+        </div>
+        <div style=" height: 80px;" class="col-3 ss">
+          <app-comp></app-comp>
+          </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!--<mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+              [animation]="'slide'">
+  <mdb-carousel-item *ngFor="let item of slides; let i = index">
+    <div class="col-md-4" *ngFor="let card of item; let cardIndex = index">
+      <mdb-card class="my-1">
+        <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h4>{{card.title}}</h4>
+          </mdb-card-title>
+          <p>{{card.description}}</p>
+          <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect>{{card.buttonText}}</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel>
+-->
+
+<!-- Les plus demandés -->
+<section class="h-100 h-custom" >
+  <div class="container py-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">      
+        <div class="card" >
+          <div class="card-body p-4">
+            <div class="row d-flex justify-content-center align-items-center h-100" style="overflow-x: auto ;">
+              <app-carousel></app-carousel>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Vente Flash -->
+<section class="h-100 h-custom" >
+  <div class="container py-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">      
+        <div class="card" >
+          <div class="card-body p-4">
+            <div class="row d-flex justify-content-center align-items-center h-100" style="overflow-x: auto ;">
+              <app-vente-f></app-vente-f>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<!-- publicité -->
+<section class="h-100 h-custom">
+  <div class="container  py-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">      
+            <div class="row">
+  <div style=" height: 300px;" class="col-lg-6 ">
+  <app-p1></app-p1>
+  </div>
+  <div style="height: 300px;" class="col-lg-6" >
+  <app-p2></app-p2>
+  </div>
+  
+  <div style=" height: 300px;" class="col-lg-6 ">
+    <app-p3></app-p3>
+  </div>
+  <div style="height: 300px;" class="col-lg-6" >
+    <app-p4></app-p4>
+    </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          </section>
+
+<!--Promotions Exceptionnelles  -->
+<section class="h-100 h-custom" >
+  <div class="container py-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">      
+       
+        <div class="card" >
+          <div class="card-body p-4">
+            <div class="row d-flex justify-content-center align-items-center h-100" style="overflow-x: auto ;">
+              <div class="col-12 col-lg-12">
+                <a href="offre-special"> <h1 class=" d-flex justify-content-center align-items-center" style="color: black;font-size: 30px;"><b>Promotions Exceptionnelles</b></h1></a>
+                <h5  class=" d-flex justify-content-center align-items-center" style="color: rgb(116, 116, 116);"> Vous trouvez ici des offres Exceptionnelles </h5>
+              </div> 
+              <app-offre></app-offre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Nos Sous Catégories -->
+<section class="h-100 h-custom" >
+  <div class="container py-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">      
+       
+        <div class="card" >
+          <div class="card-body p-4">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-lg-12">
+                <br>
+                <h1 class=" d-flex justify-content-center align-items-center " style="color: black;font-size: 30px;margin-bottom: 40px;"><b>Nos Sous Catégorie</b></h1>
+                <br>
+              </div> 
+              <app-nos-categorie></app-nos-categorie>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- publicité -->
+<section class="h-100 h-custom" >
+  <div class="container  py-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">      
+  <div style=" height: 300px;">
+    <app-pub-horizontal></app-pub-horizontal>
+  </div>
+ 
+          </div>
+          </div>
+          </div>
+          </section>
+
+<!-- Nos Sous Catégories -->
+<section class="h-100 h-custom" >
+  <div class="container py-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">      
+       
+        <div class="card" >
+          <div class="card-body p-4">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-lg-12">
+                <br>
+                <h1 class=" d-flex justify-content-center align-items-center " style="color: black;font-size: 30px;margin-bottom: 40px;"><b>Nos Sous Catégorie</b></h1>
+                <br>
+              </div> 
+              <app-nos-categorie></app-nos-categorie>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- publicité -->
+<section class="h-100 h-custom">
+  <div class="container  py-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">      
+  <div style=" height: 300px;">
+    <app-pub-horizontal2></app-pub-horizontal2>
+  </div>
+ 
+          </div>
+          </div>
+          </div>
+          </section>
+
+<!-- Nos Marques Populaires -->
+<section class="h-100 h-custom" >
+  <div class="container py-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">      
+       
+        <div class="card" >
+          <div class="card-body p-4">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-lg-12">
+                <br>
+                <h1 class=" d-flex justify-content-center align-items-center " style="color: black;font-size: 30px;margin-bottom: 40px;"><b>Nos Marques Populaires</b></h1>
+                <br>
+              </div> 
+              <app-marque></app-marque>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<app-footer></app-footer>

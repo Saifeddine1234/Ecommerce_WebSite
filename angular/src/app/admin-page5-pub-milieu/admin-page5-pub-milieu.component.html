@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"/>
+    <title>Tunizon - Admin</title>
+  </head>
+  <body>
+    <!-- top navigation bar -->
+    <app-admin-navbar></app-admin-navbar>
+    <!-- top navigation bar -->
+      <div class="row">
+        <div class="col-2">
+            <!-- sidebar -->
+            <app-admin-sidebar></app-admin-sidebar>
+            <!-- sidebar -->
+        </div>
+        <div class="col-10"> 
+                 <main class="mt-5 pt-3">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h4>Publicité milieu</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-9">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <div class="card">
+                        <div class="card-header">
+                          <span><i class="bi bi-table me-2"></i></span> Image 1
+                        </div>
+                        <div class="card-body">
+                          <form   [formGroup]="dataa" (ngSubmit)="AddItem1()">
+                            <div class="row">
+                                <div class="col-8">
+                                  <div class="form-group">
+                                    <input class="form-control" type="file" formControlName="pub_haut" id="formFile">
+                                </div>                                </div>
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-dark">envoyer</button>
+                                </div>
+                            </div>
+                            </form>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <div class="card">
+                          <div class="card-header">
+                            <span><i class="bi bi-table me-2"></i></span> Image 2
+                          </div>
+                          <div class="card-body">
+                            <form   [formGroup]="dataa" (ngSubmit)="AddItem2()">
+                              <div class="row">
+                                  <div class="col-8">
+                                    <div class="form-group">
+                                      <input class="form-control" type="file" formControlName="pub_haut" id="formFile">
+                                  </div>                                </div>
+                                  <div class="col-4">
+                                      <button type="submit" class="btn btn-dark">envoyer</button>
+                                  </div>
+                              </div>
+                              </form>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <div class="card">
+                        <div class="card-header">
+                          <span><i class="bi bi-table me-2"></i></span> Image 3 
+                        </div>
+                        <div class="card-body">
+                          <form   [formGroup]="dataa" (ngSubmit)="AddItem3()">
+                            <div class="row">
+                                <div class="col-8">
+                                  <div class="form-group">
+                                    <input class="form-control" type="file" formControlName="pub_haut" id="formFile">
+                                </div>                                </div>
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-dark">envoyer</button>
+                                </div>
+                            </div>
+                            </form>
+
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <div class="card">
+                          <div class="card-header">
+                            <span><i class="bi bi-table me-2"></i></span> Image 4
+                          </div>
+                          <div class="card-body">
+                            <form   [formGroup]="dataa" (ngSubmit)="AddItem4()">
+                              <div class="row">
+                                  <div class="col-8">
+                                    <div class="form-group">
+                                      <input class="form-control" type="file" formControlName="pub_haut" id="formFile">
+                                  </div>                                </div>
+                                  <div class="col-4">
+                                      <button type="submit" class="btn btn-dark">envoyer</button>
+                                  </div>
+                              </div>
+                              </form>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="row">
+                    <div class="col-md-12 mb-3">
+                      <div class="card">
+                        <div class="card-header">
+                          <span><i class="bi bi-table me-2"></i></span> List des images
+                        </div>
+                        <div class="card-body">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">numero</th>
+                                <th scope="col">URL</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><b>Image 1</b></td>
+                                <td>{{m1}}</td>
+                              </tr>
+                              <tr>
+                                <td><b>Image 2</b></td>
+                                <td>{{m2}}</td>
+                              </tr>
+                              <tr>
+                                <td><b>Image 3</b></td>
+                                <td>{{m3}}</td>
+                              </tr>
+                              <tr>
+                                <td><b>Image 4</b></td>
+                                <td>{{m4}}</td>
+                              </tr>
+                            </tbody>
+                          </table> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-3" >
+                    <div class="row">
+                      <div class="col-md-12 mb-3">
+                        <div class="card">
+                          <div class="card-header">
+                            <span><i class="bi bi-table "></i></span> Page
+                          </div>
+                          <div class="card-body" >
+                             <img src="../../assets/pages/pub-haut.png">
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </main>
+
+
+    </div>
+  </div>
+   
+    <!-- offcanvas -->
+  
+ 
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<section class="h-100 h-custom" >
+  <div class="container py-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">      
+       
+        <div class="card" >
+          <div class="card-body p-4">
+            <b style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 18px;">Sous Catégorie</b>
+            <br>
+            <br>
+
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              
+              <div class="row">
+                <div  *ngFor="let i of souscategories" style="margin-bottom: 10px;" class=" col-lg-2 col-6">
+                    <div style="margin-bottom: 10px;"  class="card box-shadow  " style="border-color: gainsboro;">
+                        <img src="/assets/pub2.jpg" class="img-responsive"  style="   width: 100%;height: auto;">
+                        <p class="d-flex justify-content-center" >{{i.souscategorie}}</p>
+                    </div>
+                </div>
+            </div>              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 

@@ -1,0 +1,9 @@
+
+  <div class="row">
+    <div  *ngFor="let i of imagemarques" style="margin-bottom: 10px;" class=" col-lg-3 col-6">
+        <div style="margin-bottom: 10px;"  class="card  box-shadow" style="border-color: gainsboro;">
+            <img src="/assets/{{i.imagemarque}}" class="img-responsive"  style="   width: 100%;height: auto;">
+            <p class="d-flex justify-content-center">{{i.marque}}</p>
+        </div>
+    </div>
+</div>  

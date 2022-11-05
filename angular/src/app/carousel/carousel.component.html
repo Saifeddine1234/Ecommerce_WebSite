@@ -1,0 +1,28 @@
+<a href="plus-demande"><h1 class=" d-flex justify-content-center align-items-center" style="color: black;font-size: 30px;"><b>Les Plus demandés</b></h1></a>
+<h5  class=" d-flex justify-content-center align-items-center" style="color: rgb(131, 131, 131);"> Vous avez deja un compte à TuniZon ?</h5>
+<carousel  class=" d-flex justify-content-center align-items-center"
+        [itemsPerSlide]="itemsPerSlide"
+        [singleSlideOffset]="singleSlideOffset"
+        [noWrap]="!noWrap"
+        [interval]="0"
+        [startFromIndex]="4"
+        (slideRangeChange)="onSlideRangeChange($event)">
+        <slide *ngFor="let slide of slides" class="pl-2 pr-4"  >
+                    <div class="card box-shadow mx-auto my-5 " style="width: 15rem;">
+                        <div style="height:200px;width:auto;">
+                            <img src="{{slide.image}}"  class="card-img-top" alt="...">
+                        </div>
+                      <div class="card-body">
+                        <div class=" text-center">
+                            <h6 style="color:grey ;">Réf : RF-55dd5d</h6>
+                            <div class="">nike air</div>
+                            <div class=""> <b style="font-weight: bold;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: rgb(25, 91, 167);padding-right: 10px;">200 DT</b><s style="font-weight: bold;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 100 DT</s></div>
+                            <button class="btn  mt-3 " style="width: 100%; background-color:  rgb(25, 91, 167);color: azure;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ajouter panier</button>
+                        </div>
+                  
+                      </div>
+            
+                  
+                </div>
+        </slide>
+        </carousel>

@@ -1,0 +1,56 @@
+<section class="h-100 h-custom bg-light" >
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">    
+<!-- Navbar -->
+<nav ngxNavbarDynamicExpand class="navbar-light bg-light">
+  <button class="navbar-toggler" type="button" (click)="collapse.toggle()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+  </button>
+  <ngx-navbar-collapse #collapse="ngxNavbarCollapse">
+    <ul class="snip1143 navbar-nav mr-auto">
+      <li class="current"><a href="/" data-hover="TUNIZON">TUNIZON</a></li>
+</ul>
+    <!-- Center elements -->
+    <ul class="navbar-nav flex-row d-none d-md-flex">
+      <form class="input-group w-auto my-auto d-none d-sm-flex">
+          <input
+            autocomplete="off"
+            type="search"
+            class="form-control rounded"
+            placeholder="Search"
+            style="min-width: 425px;"
+          />
+          <span class="input-group-text border-0 d-none d-lg-flex"
+            ><i class="fas fa-search"></i
+          ></span>
+        </form>
+   
+  </ul>
+  <!-- Center elements -->
+      <ul class="snip1143 navbar-nav ml-auto " >
+        <div class="dropdown" *ngIf="mLogin == true">
+          <li><a href="information-compte" data-hover="Profil" style="color:rgb(25, 91, 167);">Profil</a></li>
+          <div class="dropdown-content">
+            <a href="information-compte" >Information Compte</a>
+            <a href="vos-commandes">Vos Commandes</a>
+            <a href="boite-reception">Boite de Réception</a>
+            <a href="" (click)="deconnexion()" style="background-color:rgb(25, 91, 167);color: #fff;">Déconnexion</a>
+          </div>
+        </div>
+        <li *ngIf="mLogin == false"><a href="se-connecter" data-hover="Login" style="color: rgb(25, 91, 167);">Login</a></li>
+        <li><a href="panier" data-hover="Panier" style="color: rgb(25, 91, 167);">Panier         <span class="badge badge-light" style="color:  rgb(25, 91, 167);">{{count}}</span>
+        </a></li>
+
+       
+      </ul> 
+    
+      </ngx-navbar-collapse>
+
+</nav>
+</div>
+</div>
+</div>
+</section>

@@ -1,0 +1,32 @@
+<a href="vente-flash"><h1 class=" d-flex justify-content-center align-items-center" style="color: black;font-size: 30px;"><b>Vente Flash</b></h1></a>
+  <h5  class=" d-flex justify-content-center align-items-center" style="color: rgb(199, 17, 17);"> 00:00:00</h5>
+  <carousel  class=" d-flex justify-content-center align-items-center"
+          [itemsPerSlide]="itemsPerSlide"
+          [singleSlideOffset]="singleSlideOffset"
+          [noWrap]="!noWrap"
+          [interval]="0"
+          [startFromIndex]="4"
+          (slideRangeChange)="onSlideRangeChange($event)">
+          <slide *ngFor="let produit of produits" class="pl-2 pr-4"  >
+            <a  href="detail/{{produit.ID}}" >
+                      <div class="card box-shadow mx-auto my-5 " style="width: 15rem;">
+                        
+                          <div style="height:200px;width:auto;">
+                              <img src="{{produit.imageProduit}}"  class="card-img-top " alt="...">
+                          </div>
+                        <div class="card-body">
+                          <div class=" text-center">
+                              <h6 style="color:grey ;">Réf : RF-55dd5d</h6>
+                              <div class="" style="color:black ;">{{produit.nomProduit}}</div>
+                              <div class=""> <b style="font-weight: bold;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: rgb(25, 91, 167);padding-right: 10px;">{{produit.prixSolder}} DT</b><s style="font-weight: bold;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:black ;"> {{produit.prixProduit}} DT</s></div>
+                             <a href=""><button class="btn  mt-3 "  style="width: 100%; background-color:  rgb(25, 91, 167);color: azure;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ajouter panier</button></a> 
+                          </div>
+                    
+                        </div>
+                     
+                    
+                  </div>
+                </a>
+          </slide>
+          </carousel>
+  

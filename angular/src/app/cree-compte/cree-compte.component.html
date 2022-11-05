@@ -1,0 +1,68 @@
+<div class="container">
+  <div style="height: 100%;margin-top: 10px;" class="card">
+    <div class="card-body" >
+       <br>
+       <form style="margin-left: 20px;margin-right: 20px;"  [formGroup]="dataa" (ngSubmit)="AddItem()">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="d-flex justify-content-start"  style="font-weight: bold;color: rgb(25, 91, 167);font-family:  'Arial Narrow', Arial, sans-serif;" for="exampleFormControlInput1">Nom</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="nomUser" placeholder="Nom..">
+                  </div>  
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="d-flex justify-content-start"  style="font-weight: bold;color: rgb(25, 91, 167);font-family:  'Arial Narrow', Arial, sans-serif;" for="exampleFormControlInput1">Prénom</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="prenomUser" placeholder="Prénom..">
+                  </div>  
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="d-flex justify-content-start"  style="font-weight: bold;color: rgb(25, 91, 167);font-family:  'Arial Narrow', Arial, sans-serif;" for="exampleFormControlInput1">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" formControlName="emailUser" placeholder="Email..">
+        </div> 
+        <div class="form-group">
+          <label class="d-flex justify-content-start"  style="font-weight: bold;color: rgb(25, 91, 167);font-family:  'Arial Narrow', Arial, sans-serif;" for="exampleFormControlInput1">Adresse</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="adresseUser" placeholder="Adresse ..">
+      </div> 
+        <div class="form-group">
+            <label class="d-flex justify-content-start"  style="font-weight: bold;color: rgb(25, 91, 167);font-family:  'Arial Narrow', Arial, sans-serif;" for="exampleFormControlInput1">Téléphone</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="telephoneUser" placeholder="Téléphone..">
+        </div> 
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="d-flex justify-content-start"  style="font-weight: bold;color: rgb(25, 91, 167);font-family:  'Arial Narrow', Arial, sans-serif;" for="exampleFormControlTextarea1">Mot de passe</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput1" formControlName="mdpUser" placeholder="Mot de passe.." >
+                  </div>  
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="d-flex justify-content-start" style="font-weight: bold;color: rgb(25, 91, 167);font-family:  'Arial Narrow', Arial, sans-serif;" for="exampleFormControlTextarea1">Confirmer le Mot de passe</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Confirmer le Mot de passe.." >
+                  </div>
+            </div>
+        </div>
+        <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+                j'ai lu <u>les Conditions générales</u> de vente et la Notification sur la Confidentialité et les Cookies de Jumia.
+            </label>
+          </div>
+          <br>
+          <input type="submit"  style="width: 100%; background-color:  rgb(25, 91, 167);color: azure;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="btn" value="Créer"/>  
+          <br>      
+
+        <h5 style="margin-top: 20px;">Vous possédez déjà un compte ? <a href="se-connecter" style="color: rgb(25, 91, 167);" >connectez-vous</a></h5>
+      </form>
+
+    </div>
+  </div>
+  </div>
+
+

@@ -1,0 +1,24 @@
+<div class="container">
+  <div style="height: 100%;margin-top: 10px;" class="card">
+    <div class="card-body" >
+       <br>
+       <form style="margin-left: 60px;margin-right: 60px;" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
+        <div class="form-group">
+          <label class="d-flex justify-content-start"  style="font-weight: bold;color: rgb(25, 91, 167);font-family:  'Arial Narrow', Arial, sans-serif;" for="exampleFormControlInput1">Telephone</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" formControlName="telephoneUser">
+        </div>    
+        <div class="form-group">
+          <label class="d-flex justify-content-start"  style="font-weight: bold;color:  rgb(25, 91, 167);font-family:  'Arial Narrow', Arial, sans-serif;"  for="exampleFormControlTextarea1">Mot de passe</label>
+          <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="" formControlName="mdpUser" >
+        </div>
+        <a href="se-connecter" class="d-flex justify-content-end"  style="color: grey;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Mot de passe oublié ? </a>
+        <br>
+        <input type="submit"  style="width: 100%; background-color:  rgb(25, 91, 167);color: azure;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="btn" value="Se connecter"/>
+
+        <h5 style="margin-top: 20px;margin-bottom: 20px;">Nouveau Chez TuniZon <a href="cree-compte" style="color: rgb(25, 91, 167);">Crée un compte</a></h5>
+      </form>
+
+    </div>
+  </div>
+
+</div>
