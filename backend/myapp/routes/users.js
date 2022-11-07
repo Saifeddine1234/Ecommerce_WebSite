@@ -93,17 +93,6 @@ app.get('/get_user', function (req, res) {
     }
   })
 })
-
-app.get('/adminP',verifyToken , function(req , res){
-  console.log(req.decodedToken)
-  if(req && req.decodedToken){
-    res.json({status : 'ok' , data : cc })
-  
-  }else{
-    res.json({status : 'no' , data :'no' })
-  }
-  })
-var cc ;
 app.post('/login', async(req,res) => {
   const telephoneUser = req.body?.telephoneUser
   const mdpUser = req.body?.mdpUser
@@ -111,7 +100,9 @@ app.post('/login', async(req,res) => {
   User.find({telephoneUser :telephoneUser },(err, result) => {
     console.log(result)
 const existUser = result ;
-cc = existUser.telephoneUser ;
+var cc = existUser[0].telephoneUser ;
+console.log("sssssssssssssssssssss" + cc)
+
 console.log(existUser[0].telephoneUser);
 console.log(telephoneUser);
 
@@ -125,6 +116,16 @@ console.log(telephoneUser);
                      'secretKey', {expiresIn : '1h'}
                    );
                    console.log(auth);
+                   console.log(cc)
+app.get('/adminP',verifyToken , function(req , res){
+  console.log(req.decodedToken)
+  if(req && req.decodedToken){
+    res.json({status : 'ok' , data : cc })
+  
+  }else{
+    res.json({status : 'no' , data :'no' })
+  }
+  })
                  res.json({status: 'ok',loginUser : true, data: auth , tel : existUser});
               } else {
                  res.json({status: 'no', loginUser : false, data: 'Please enter valid password'});

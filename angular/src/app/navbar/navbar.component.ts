@@ -8,7 +8,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-mLogin : any ;
+mLogin : any  ;
 panier : any ;
 count : any =0 ;
 isCollapsed : any = true;
