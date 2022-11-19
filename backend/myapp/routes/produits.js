@@ -192,6 +192,20 @@ app.get('/get_produit_byid/:id', function (req, res) {
     }
   })
 })
+
+// read produit from search
+app.get('/sr/:search', function (req, res) {
+  var regex = new RegExp( req.params.search);
+  console.log("fff"+ regex)
+  Produit.find({ nomProduit : regex },(err, result) => {
+    if (!err) {
+      res.send(result)
+      console.log(result)
+    } else {
+      console.log(err)
+      console.log('err')
+    
+  }})})
 app.get('/get_produit_bysouscat/:scat', function (req, res) {
   console.log(req.params.scat)
   SousCategorie.find({ souscategorie : req.params.scat},(err, result) => {

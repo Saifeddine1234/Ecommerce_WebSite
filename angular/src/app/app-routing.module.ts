@@ -33,6 +33,7 @@ import { Page15CommanderComponent } from './page15-commander/page15-commander.co
 import { Page16Login2Component } from './page16-login2/page16-login2.component';
 import { Page15CommandebienpasserComponent } from './page15-commandebienpasser/page15-commandebienpasser.component';
 import { Page16PanierVideComponent } from './page16-panier-vide/page16-panier-vide.component';
+import { Page17SearchComponent } from './page17-search/page17-search.component';
 
 
 const routes: Routes = [
@@ -113,6 +114,14 @@ const routes: Routes = [
   {
     path: 'plus-demande',
     component:Page13PlusDemandeeComponent,
+  },
+  {
+    path: 'search/:box',
+    component:Page17SearchComponent,
+  },
+  {
+    path: 'search',
+    component:Page4CategorieComponent,
   },
   {
     path: 'detail/:id',

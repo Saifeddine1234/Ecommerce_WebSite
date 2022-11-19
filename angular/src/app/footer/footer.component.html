@@ -9,7 +9,7 @@
 
           <!-- Grid column -->
           <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-            <h6 class="mb-0">Get connected with us on social networks!</h6>
+            <h6 class="mb-0">Connectez-vous avec nous sur les réseaux sociaux !</h6>
           </div>
           <!-- Grid column -->
 
@@ -19,10 +19,6 @@
             <!-- Facebook -->
             <a class="fb-ic">
               <mdb-icon fab icon="facebook" class="white-text mr-4"></mdb-icon>
-            </a>
-            <!-- Twitter -->
-            <a class="tw-ic">
-              <mdb-icon fab icon="twitter" class="white-text mr-4"></mdb-icon>
             </a>
             <!-- Google +-->
             <a class="gplus-ic">
@@ -68,19 +64,12 @@
           <!-- Links -->
           <h6 class="text-uppercase font-weight-bold">Catégories</h6>
           <hr class=" accent-3 mb-4 mt-0 d-inline-block mx-auto" style="font-weight: bold;background-color: rgb(25, 91, 167);font-family:  'Arial Narrow', Arial, sans-serif;width: 60px;">
-          <p>
-            <a class="dark-grey-text" href="#!">Homme</a>
-          </p>
-          <p>
-            <a class="dark-grey-text" href="#!">Femme</a>
-          </p>
-          <p>
-            <a class="dark-grey-text" href="#!">Enfant</a>
-          </p>
-          <p>
-            <a class="dark-grey-text" href="#!">Autre</a>
-          </p>
-
+          <ul class="nav flex-column"  *ngFor="let i of categories">
+            <li class="nav-item">
+              <a class="nav-link" href="get_produit_bycat/{{i.categorie}}" (click)="getbycat(i.categorie)"> <b>{{i.categorie}}</b></a>
+            </li>
+          </ul>
+          
         </div>
         <!-- Grid column -->
 
@@ -91,7 +80,7 @@
           <h6 class="text-uppercase font-weight-bold">Service Client</h6>
           <hr class=" accent-3 mb-4 mt-0 d-inline-block mx-auto" style="font-weight: bold;background-color: rgb(25, 91, 167);font-family:  'Arial Narrow', Arial, sans-serif;width: 60px;">
           <p>
-            <a class="dark-grey-text" href="#!">Centre d'assistance </a>
+            <a class="dark-grey-text" href="centre-assistance">Centre d'assistance </a>
           </p>
           <p>
             <a class="dark-grey-text" href="#!">Acheter sur Tunizon </a>

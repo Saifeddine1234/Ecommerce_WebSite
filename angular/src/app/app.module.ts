@@ -80,6 +80,8 @@ import { Page16Login2Component } from './page16-login2/page16-login2.component';
 import { Connect2Component } from './connect2/connect2.component';
 import { Page15CommandebienpasserComponent } from './page15-commandebienpasser/page15-commandebienpasser.component';
 import { Page16PanierVideComponent } from './page16-panier-vide/page16-panier-vide.component';
+import { Page17SearchComponent } from './page17-search/page17-search.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -157,6 +159,8 @@ import { Page16PanierVideComponent } from './page16-panier-vide/page16-panier-vi
     Connect2Component,
     Page15CommandebienpasserComponent,
     Page16PanierVideComponent,
+    Page17SearchComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

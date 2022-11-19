@@ -66,12 +66,19 @@ export class ProduitService {
   getMarque(){
     return this.httpclient.get<any>('http://localhost:3001/produits/get_marque');
   }
+  getMarqueByCat(cat: String) {
+    console.log(cat);
+    return this.httpclient.get<any>('http://localhost:3001/produits/get_marque_bycat/'+cat)
+  }
   getProduit(){
     return this.httpclient.get<any>('http://localhost:3001/produits/get_produit');
   }
   getByCategorie(cat: String) {
-    console.log(cat);
     return this.httpclient.get<any>('http://localhost:3001/produits/get_produit_bycat/'+cat)
+  }
+  getSearch(serach: String) {
+    console.log(serach);
+    return this.httpclient.get<any>('http://localhost:3001/produits/sr/'+serach)
   }
   getByid(id: String) {
     return this.httpclient.get<any>('http://localhost:3001/produits/get_produit_byid/'+id)

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable,Subscription, interval  } from 'rxjs';
 import { UserService } from '../user.service';
 @Component({
@@ -14,7 +14,7 @@ count : any =0 ;
 isCollapsed : any = true;
 produitpanier : any = [];
   updateSubscription: any;
-  constructor(private router: Router , private user : UserService){
+  constructor(private router: Router ,private route: ActivatedRoute , private user : UserService){
   
   }
   deconnexion(){
@@ -59,7 +59,7 @@ produitpanier : any = [];
 
 
         }
-        console.log(this.mLogin);
+        console.log(this.route.snapshot.params['cat']);
     
     
     
