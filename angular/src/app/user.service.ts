@@ -38,6 +38,12 @@ export class UserService {
   login(login : any){
     return this.httpclient.post<any>('http://localhost:3001/users/login', login);
   }
+  sendEmail(user : any){
+    return this.httpclient.post<any>('http://localhost:3001/users/sendemail', user);
+  }
+  getResetPassword(id : any,token : any){
+    return this.httpclient.get<any>('http://localhost:3001/users/resetpassword/'+id+'/'+token);
+  }
   goto(token : any){
     console.log(token)
     const headers = new HttpHeaders(

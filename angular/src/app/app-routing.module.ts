@@ -34,6 +34,8 @@ import { Page16Login2Component } from './page16-login2/page16-login2.component';
 import { Page15CommandebienpasserComponent } from './page15-commandebienpasser/page15-commandebienpasser.component';
 import { Page16PanierVideComponent } from './page16-panier-vide/page16-panier-vide.component';
 import { Page17SearchComponent } from './page17-search/page17-search.component';
+import { Page18ForgetpasswordComponent } from './page18-forgetpassword/page18-forgetpassword.component';
+import { Page18ResetpasswordComponent } from './page18-resetpassword/page18-resetpassword.component';
 
 
 const routes: Routes = [
@@ -110,7 +112,14 @@ const routes: Routes = [
     path: 'boite-reception',
     component:Page12BoiteReceptionComponent,
   },
-  
+  {
+    path: 'ForgetPassword',
+    component:Page18ForgetpasswordComponent,
+  },
+  {
+    path: 'ResetPassword/:id/:token',
+    component:Page18ResetpasswordComponent,
+  },  
   {
     path: 'plus-demande',
     component:Page13PlusDemandeeComponent,

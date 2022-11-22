@@ -82,6 +82,10 @@ import { Page15CommandebienpasserComponent } from './page15-commandebienpasser/p
 import { Page16PanierVideComponent } from './page16-panier-vide/page16-panier-vide.component';
 import { Page17SearchComponent } from './page17-search/page17-search.component';
 import { SearchComponent } from './search/search.component';
+import { Page18ForgetpasswordComponent } from './page18-forgetpassword/page18-forgetpassword.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { Page18ResetpasswordComponent } from './page18-resetpassword/page18-resetpassword.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 
 
 
@@ -161,6 +165,10 @@ import { SearchComponent } from './search/search.component';
     Page16PanierVideComponent,
     Page17SearchComponent,
     SearchComponent,
+    Page18ForgetpasswordComponent,
+    ForgetpasswordComponent,
+    Page18ResetpasswordComponent,
+    ResetpasswordComponent,
   ],
   imports: [
     BrowserModule,

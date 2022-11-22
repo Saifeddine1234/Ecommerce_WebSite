@@ -3,6 +3,9 @@ var app = module.exports = express.Router();
 var bodyParser = require('body-parser');
 const secretKey ="sdqf5ds5dd#ddfdf@fdfvgdçàdçàsddsdds";
 const jwt = require("jsonwebtoken");
+const nodemailer = require("nodemailer");
+const detail = require("../detail.json");
+const JWT_SECRET = "some super secret ...";
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));  
@@ -151,6 +154,82 @@ app.get('/get_by_telephone/:tel', function (req, res) {
     }
   })
 })
+
+
+
+//forgetPassword
+app.post("/sendemail", (req, res) => {
+  console.log("request came");
+  let user = req.body;
+  User.find((err, result) => {
+    if (!err) {
+      for(let i =0 ; i < result.length ; i++){
+        console.log(result[i].emailUser)
+        if(user.email ==result[i].emailUser){
+          const secret = JWT_SECRET;
+          const payload = {
+            email : result[i].emailUser,
+            id : result[i]._id
+          }
+          const token = jwt.sign(payload , secret,{expiresIn : '15m'});
+          const link = `http://localhost:4200/ResetPassword/${result[i]._id}/${token}`
+          console.log(link);
+          sendMail(user, link, info => {
+            console.log(`The mail has beed send 😃 and the id is ${info.messageId}`);
+            res.send(info);
+          });
+        }else{
+      console.log("l'email n'existe pas dans le BD");
+        }
+      }
+    } else {
+      console.log(err)
+      console.log('err')
+    }
+  })
+});
+
+async function sendMail(user , link, callback) {
+  console.log(link);
+  // create reusable transporter object using the default SMTP transport
+  let transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: detail.email,
+      pass: detail.password
+    }
+  });
+
+  let mailOptions = {
+    from: 'saifeddinechaaben@gmail.com', // sender address
+    to: 'jeedchaaben@gmail.com', // list of receivers
+    subject: "Wellcome to Fun Of Heuristic 👻", // Subject line
+    html: `<h1>Hi ${user.name}</h1><br>
+    <h1>  ${link}</h1><br>
+    <h4>Thanks for joining us</h4>`
+  };
+
+  // send mail with defined transport object
+  let info = await transporter.sendMail(mailOptions);
+
+  callback(info);
+  
+}
+
+app.post("/resetpassword/:id/:token", (req, res) => {
+  console.log("resettttttt");
+  const { id , token} = req.params ; 
+  const secret = JWT_SECRET;
+  try {
+const payload = jwt.verify(token , secret);
+res.status(200).send({ "success": true, "msg": 'Successful created new test.', "result": payload });
+}catch(error){
+    res.send(error.message)
+  }
+
+});
 
 
 

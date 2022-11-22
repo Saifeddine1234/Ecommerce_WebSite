@@ -6,28 +6,8 @@
             <div class="col-lg-3 mt-2">
                  <div class="card">
                   <div class="card-body ">
-                    <b style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 18px;">Prix</b>
                     <br>
-                    <br>
-                    <form class=" text-center">
-                        <div class="row">
-                            <div class="col-6">
-                        <div style="margin-left: 10px;" class="form-group">
-                          <label >Min</label>
-                          <input type="number" class="form-control">
-                        </div>
-                        </div>
-                        <div   class="col-6">
-                        <div  style="margin-right: 10px;" class="form-group">
-                          <label for="exampleInputPassword1">Max</label>
-                          <input type="number" class="form-control">
-                        </div>
-                        </div>
-                        </div>
-                        <button type="submit" class="btn btn-dark ">ok</button>
-                      </form>
-                      <br/>
-                    <hr class="my-4"/>
+
                     <b style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 18px;">Marque</b>
                     <br>
                     <br>
@@ -61,7 +41,7 @@
                             </div>
                           <div class="card-body">
                             <div class=" text-center">
-                                <h6 style="color:grey ;">Réf : RF-55dd5d</h6>
+                                <h6 style="color:grey ;">Réf : RF-{{i.ID}}</h6>
                                 <div class="" style="color:black ;">{{i.nomProduit}}</div>
                                 <div class=""> <b style="font-weight: bold;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: rgb(25, 91, 167);padding-right: 10px;">{{i.prixSolder}} DT</b><s style="font-weight: bold;color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> {{ i.prixProduit }}</s></div>
                                 <button class="btn  mt-3 " (click)="additem(i)" style="width: 100%; background-color:  rgb(25, 91, 167);color: azure;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ajouter panier</button>

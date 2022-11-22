@@ -64,10 +64,10 @@ onCheckboxChange(event: any) {
           var produitSolder = parseInt(result[i].prixProduit)   - ((parseInt(result[i].prixProduit)  * parseInt(result[i].remiseProduit)) / 100 )
           if( produitSolder == result[i].prixProduit  )
           {
-            this.produits.push({ID : result[i]._id , nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' });
+            this.produits.push({ID : result[i]._id.substr(18,6) , nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' });
           }else
           {
-            this.produits.push({ID : result[i]._id , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit + ' DT'});
+            this.produits.push({ID : result[i]._id.substr(18,6) , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit + ' DT'});
           }
         }
       }
@@ -80,10 +80,10 @@ onCheckboxChange(event: any) {
             var produitSolder = parseInt(result[i].prixProduit)   - ((parseInt(result[i].prixProduit)  * parseInt(result[i].remiseProduit)) / 100 )
             if( produitSolder == result[i].prixProduit  )
             {
-              this.produits.push({ID : result[i]._id , nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' });
+              this.produits.push({ID : result[i]._id.substr(18,6) , nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' });
             }else
             {
-              this.produits.push({ID : result[i]._id , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit + ' DT'});
+              this.produits.push({ID : result[i]._id.substr(18,6) , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit + ' DT'});
             }
           }
         }
@@ -103,10 +103,10 @@ onCheckboxChange(event: any) {
               {
                 if( produitSolder == result[i].prixProduit )
                   {
-                  this.produits.push({ID : result[i]._id , nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' });
+                  this.produits.push({ID : result[i]._id.substr(18,6) , nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' });
                 }else
                 {
-                  this.produits.push({ID : result[i]._id , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit + ' DT'});
+                  this.produits.push({ID : result[i]._id.substr(18,6) , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit + ' DT'});
                 }
               }
             }
@@ -126,10 +126,10 @@ onCheckboxChange(event: any) {
               {
                 if( produitSolder == result[i].prixProduit )
                   {
-                  this.produits.push({ID : result[i]._id , nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' });
+                  this.produits.push({ID : result[i]._id.substr(18,6) , nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' });
                 }else
                 {
-                  this.produits.push({ID : result[i]._id , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit + ' DT'});
+                  this.produits.push({ID : result[i]._id.substr(18,6) , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit + ' DT'});
                 }
               }
             }
@@ -148,9 +148,9 @@ onCheckboxChange(event: any) {
           for( var i = 0; i< result.length; i++){
             var produitSolder = parseInt(result[i].prixProduit)   - ((parseInt(result[i].prixProduit)  * parseInt(result[i].remiseProduit)) / 100 )
             if( produitSolder == result[i].prixProduit ){
-              this.produits[i] = {ID : result[i]._id , nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' }
+              this.produits[i] = {ID : result[i]._id.substr(18,6) , nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' }
             }else{
-              this.produits[i] = {ID : result[i]._id , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit + ' DT'}
+              this.produits[i] = {ID : result[i]._id.substr(18,6) , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit + ' DT'}
             }
           }
         }
@@ -162,9 +162,9 @@ onCheckboxChange(event: any) {
           for( var i = 0; i< result.length; i++){
             var produitSolder = parseInt(result[i].prixProduit)   - ((parseInt(result[i].prixProduit)  * parseInt(result[i].remiseProduit)) / 100 )
             if( produitSolder == result[i].prixProduit ){
-              this.produits[i] = {ID : result[i]._id ,  nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' }
+              this.produits[i] = {ID : result[i]._id.substr(18,6) ,  nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' }
             }else{
-              this.produits[i] = {ID : result[i]._id , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit  + ' DT' }
+              this.produits[i] = {ID : result[i]._id.substr(18,6) , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit  + ' DT' }
             }
           }
         }

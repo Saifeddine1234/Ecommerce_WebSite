@@ -32,9 +32,9 @@ export class VenteFComponent implements OnInit {
           if(result[i].venteFlash && s <= 4 ){
           var produitSolder = parseInt(result[i].prixProduit)   - ((parseInt(result[i].prixProduit)  * parseInt(result[i].remiseProduit)) / 100 )
           if( produitSolder == result[i].prixProduit ){
-            this.produits[i] = {ID : result[i]._id ,  nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' ,  imageProduit : "/assets/meeting-01.jpg"  }
+            this.produits[i] = {ID : result[i]._id , Ref : result[i]._id.substr(18,6)  ,  nomProduit : result[i].nomProduit,  prixSolder : produitSolder ,  prixProduit : '.' ,  imageProduit : "/assets/meeting-01.jpg"  }
           }else{
-            this.produits[i] = {ID : result[i]._id , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit  + ' DT' , imageProduit : "/assets/meeting-01.jpg"}
+            this.produits[i] = {ID : result[i]._id , Ref : result[i]._id.substr(18,6) , nomProduit : result[i].nomProduit , prixSolder : produitSolder ,  prixProduit : result[i].prixProduit  + ' DT' , imageProduit : "/assets/meeting-01.jpg"}
           }
         }
       }
