@@ -19,7 +19,12 @@ export class UserService {
     console.log(assistance);
     return this.httpclient.post<any>('http://localhost:3001/users/add_assistance', assistance);
   }
-
+  UpdateBlock(id: any){
+    return this.httpclient.post<any>('http://localhost:3001/users/bloque', {id : id});
+  }
+  UpdateDeBlock(id: any){
+    return this.httpclient.post<any>('http://localhost:3001/users/debloque', {id : id});
+  }
   getUser(){
     return this.httpclient.get<any>('http://localhost:3001/users/get_user');
   }

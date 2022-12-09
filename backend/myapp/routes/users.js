@@ -25,6 +25,7 @@ app.post('/add_user', function (req, res) {
   var adresseUser =req.body.adresseUser;
   var telephoneUser=req.body.telephoneUser;
   var mdpUser = req.body.mdpUser;
+  var bloque = "1";
   
   var user = new User({
     nomUser : nomUser,
@@ -32,7 +33,8 @@ app.post('/add_user', function (req, res) {
     emailUser : emailUser ,
     adresseUser : adresseUser ,
     telephoneUser : telephoneUser ,
-    mdpUser : mdpUser
+    mdpUser : mdpUser,
+    bloque : bloque,
   });
   user.save(function (err) {
   if (err) {
@@ -58,6 +60,51 @@ app.post('/add_assistance', function (req, res) {
     res.status(200).send({ "success": true, "msg": 'Successful created new test.', "result": assistance });
     });
   });
+
+  //bloque user
+  app.post('/bloque', function (req, res) {
+    var user = new User({
+      _id : req.body.id,
+      bloque : "0",
+    });
+    console.log(user);
+    console.log(req.body.id);
+    User.updateOne({_id: req.body.id} , user).then(
+() => {
+  res.status(201).json({
+    message: 'update OK'
+  });
+}
+    ).catch(
+      (error) => {
+        res.status(400).json({
+        error : error
+        });
+      }
+    )
+  });
+    //debloque user
+    app.post('/debloque', function (req, res) {
+      var user = new User({
+        _id : req.body.id,
+        bloque : "1",
+      });
+      console.log(user);
+      console.log(req.body.id);
+      User.updateOne({_id: req.body.id} , user).then(
+  () => {
+    res.status(201).json({
+      message: 'update OK'
+    });
+  }
+      ).catch(
+        (error) => {
+          res.status(400).json({
+          error : error
+          });
+        }
+      )
+    });
 
 // read assistance
 app.get('/get_assistance', function (req, res) {

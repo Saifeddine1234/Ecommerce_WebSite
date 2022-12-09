@@ -93,8 +93,36 @@ export class ProduitService {
     console.log(id);
     return this.httpclient.get<any>('http://localhost:3001/produits/get_produit_byID/'+id)
   }
-
-
+  update_categorie(cat : any , id : string,old_cat :string ){
+    console.log(cat);
+    return this.httpclient.post<any>('http://localhost:3001/produits/update_categorie/'+id+'/'+old_cat, cat);
+  }
+  update_sous_categorie(soucat : any , id : string,old_s_cat :string ){
+    return this.httpclient.post<any>('http://localhost:3001/produits/update_sous_categorie/'+id+'/'+old_s_cat, soucat);
+  }
+  update_marque(marque : any , id : string,old_marque :string ){
+    console.log(marque)
+    return this.httpclient.post<any>('http://localhost:3001/produits/update_marque/'+id+'/'+old_marque, marque);
+  }
+  update_assistance(msg : any , id : string){
+    console.log(msg)
+    return this.httpclient.post<any>('http://localhost:3001/produits/update_msg/'+id, msg);
+  }
+  update_produit(produit : any ){
+    return this.httpclient.post<any>('http://localhost:3001/produits/update_produit', produit);
+  }
+  spprimer_categorie(id  : String,old_cat:String){
+    return this.httpclient.delete<any>('http://localhost:3001/produits/delete_categorie/'+id+'/'+old_cat);
+  }
+  spprimer_sous_categorie(id  : String,old_sous_cat:String){
+    return this.httpclient.delete<any>('http://localhost:3001/produits/delete_sous_categorie/'+id+'/'+old_sous_cat);
+  }
+  spprimer_marque(id  : String,old_marque:String){
+    return this.httpclient.delete<any>('http://localhost:3001/produits/delete_marque/'+id+'/'+old_marque);
+  }
+  spprimer_produit(id  : String){
+    return this.httpclient.delete<any>('http://localhost:3001/produits/delete_produit/'+id);
+  }
 
     /*
     if (!productExists) {

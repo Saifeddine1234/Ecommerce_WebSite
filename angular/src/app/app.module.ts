@@ -72,6 +72,10 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSelectModule} from '@angular/material/select';
+
 import { Page13PlusDemandeeComponent } from './page13-plus-demandee/page13-plus-demandee.component';
 import { PlusDemandeeComponent } from './plus-demandee/plus-demandee.component';
 import { Page14DetailComponent } from './page14-detail/page14-detail.component';
@@ -86,6 +90,10 @@ import { Page18ForgetpasswordComponent } from './page18-forgetpassword/page18-fo
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { Page18ResetpasswordComponent } from './page18-resetpassword/page18-resetpassword.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { AaaaaanewPageComponent } from './aaaaaanew-page/aaaaaanew-page.component';
+import { AngularDropdownModule } from 'angular-dropdown';
+import { AdminDetailProduitComponent } from './admin-detail-produit/admin-detail-produit.component';
+import { AdminPage12CommandeComponent } from './admin-page12-commande/admin-page12-commande.component';
 
 
 
@@ -169,6 +177,9 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
     ForgetpasswordComponent,
     Page18ResetpasswordComponent,
     ResetpasswordComponent,
+    AaaaaanewPageComponent,
+    AdminDetailProduitComponent,
+    AdminPage12CommandeComponent,
   ],
   imports: [
     BrowserModule,
@@ -183,7 +194,11 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
     NgxNavbarModule ,
     MatToolbarModule,
     MatIconModule ,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule,
+    MatDividerModule,
+    MatSelectModule,
+    AngularDropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

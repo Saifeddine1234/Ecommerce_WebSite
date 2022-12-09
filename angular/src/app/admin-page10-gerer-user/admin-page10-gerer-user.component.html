@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"/>
-    <title>Tunizon - Admin</title>
-  </head>
-  <body>
     <!-- top navigation bar -->
     <app-admin-navbar></app-admin-navbar>
     <!-- top navigation bar -->
+
     <div class="row">
         <div class="col-2">
             <!-- sidebar -->
@@ -18,17 +9,30 @@
             <!-- sidebar -->
         </div>
         <div class="col-10"> 
+          <section class="h-100 h-custom" >
+            <div class="container py-2 h-100">
+              <div class="row d-flex justify-content-center  h-100">
+                <div class="col-12">  
                 <main class="mt-5 pt-3">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4>Gérer les Utilisateurs</h4>
+                            <br>
+                            <div class="row">
+                              <div class="col-4">
+                                <h4  class="d-flex justify-content-center" style="font-size: 35px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" > <i class="fas fa-trash-alt"></i></h4>
+                              </div>
+                              <div class="col-8">
+                                <h4  class="d-flex justify-content" style="font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >Gérer Utilisateurs</h4>
+                                              </div>
+                            </div>      
+                            <br>
                         </div>
                     </div>
                   <div class="row">
                     <div class="col-md-12 mb-3">
                       <div class="card">
-                        <div class="card-header">
+                        <div class="card-header" style="color: rgb(121, 121, 121);font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: large;">
                           <span><i class="bi bi-table me-2"></i></span> List des utilisateurs
                         </div>
                         <div class="card-body">
@@ -44,12 +48,14 @@
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  <tr *ngFor="let i of dataa">
-                                    <th scope="row">1</th>
-                                    <td>{{i.nomUser}} {{i.prenomUser}}</td>
-                                    <td>{{i.emailUser}}</td>
-                                    <td>{{i.telephoneUser}}</td>
-                                    <td>@mdo</td>
+                                  <tr *ngFor="let i of dataa;let index = index ">
+                                      <th scope="row">{{i._id}}</th>
+                                      <td>{{i.nomUser}} {{i.prenomUser}}</td>
+                                      <td>{{i.emailUser}}</td>
+                                      <td>{{i.telephoneUser}}</td>
+                                      <td *ngIf="i.bloque == 1"  (click)="bloque(i._id)"><a href="admin/gerer-user" style="font-weight:bold;color :rgb(75, 235, 44)">bloqué</a></td>
+                                      <td *ngIf="i.bloque == 0"  (click)="debloque(i._id)"><a href="admin/gerer-user" style="font-weight:bold;color :rgb(235, 44, 44)" >débloqué</a></td>
+                                 
                                   </tr>
                                 </tbody>
                               </table> 
@@ -59,6 +65,10 @@
                   </div>
                   </div>
               </main>
+                </div>
+              </div>
+            </div>
+          </section>
 
 
     </div>
@@ -67,5 +77,3 @@
     <!-- offcanvas -->
   
  
-  </body>
-</html>

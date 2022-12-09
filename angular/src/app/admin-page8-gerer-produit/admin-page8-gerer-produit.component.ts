@@ -63,10 +63,11 @@ export class AdminPage8GererProduitComponent implements OnInit {
           this.categoriebyscat = result[0].categorie;
           let newProduit = new Produit(scat.nomProduit , scat.prixProduit , scat.remiseProduit , scat.imageProduit , this.categoriebyscat  , scat.souscategorie , scat.marque , scat.venteFlash);
           this.produit.add_produit(newProduit).subscribe(data =>{
-          this.router.navigate(['/']);
        })  
         }
       )
+      window.location.replace("admin/gerer-produit");
+
 
     }
     ngOnInit() {
@@ -86,6 +87,12 @@ export class AdminPage8GererProduitComponent implements OnInit {
           this.produits = result;  
         }
       )
+    }
+    spprimer(id : any){
+      if(confirm('Are you sure to delete ?')){
+      this.produit.spprimer_produit(id).subscribe(data =>{})
+      window.location.replace("admin/gerer-produit");
+      }
     }
    }
 

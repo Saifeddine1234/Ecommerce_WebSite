@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"/>
-    <title>Tunizon - Admin</title>
-  </head>
-  <body>
+
     <!-- top navigation bar -->
     <app-admin-navbar></app-admin-navbar>
     <!-- top navigation bar -->
@@ -18,11 +9,17 @@
             <!-- sidebar -->
         </div>
         <div class="col-10"> 
+          <section class="h-100 h-custom" >
+            <div class="container py-2 h-100">
+              <div class="row d-flex justify-content-center  h-100">
+                <div class="col-12"> 
                 <main class="mt-5 pt-3">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4>Gérer les Produits</h4>
+                          <br>
+                          <h4  class="d-flex justify-content-center" style="font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Gérer les Produits</h4>
+                      <br>
                         </div>
                     </div>
                     <div class="row">
@@ -55,7 +52,7 @@
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect1">Sous Categorie</label>
                                             <select  class="form-control" formControlName="souscategorie" id="exampleFormControlSelect1">
-                                              <option *ngFor="let i of msouscategorie" value="{{i.souscategorie}}">{{i.souscategorie}}</option>
+                                              <option *ngFor="let i of msouscategorie" value="{{i.souscategorie}}">{{i.souscategorie}} - {{i.categorie}}</option>
                                             </select>
                                           </div>
                                           <div class="form-group">
@@ -84,32 +81,30 @@
                     <div class="col-md-12 mb-3">
                       <div class="card">
                         <div class="card-header">
-                          <span><i class="bi bi-table me-2"></i></span> List des Catégories
+                          <span><i class="bi bi-table me-2"></i></span> List des Produits
                         </div>
                         <div class="card-body">
-                            <table class="table">
+                            <table  class="table">
                                 <thead>
                                   <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Nom</th>
                                     <th scope="col">Prix</th>
                                     <th scope="col">Remise</th>
-                                    <th scope="col">Image</th>
                                     <th scope="col">Sous Catégorie</th>
                                     <th scope="col">Marque</th>
                                     <th scope="col">Supprimer</th>
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  <tr *ngFor="let i of produits">
-                                    <th scope="row">1</th>
-                                    <td>{{i.nomProduit}}</td>
-                                    <td>{{i.prixProduit}}</td>
-                                    <td>{{i.remiseProduit}}</td>
-                                    <td>{{i.imageProduit}}</td>
-                                    <td>{{i.souscategorie}}</td>
-                                    <td>{{i.marque}}</td>
-                                    <td>ss</td>
+                                  <tr *ngFor="let i of produits ; let index = index">
+                                    <th scope="row">{{index + 1 }}</th>
+                                    <td><a href="admin/detail-produit/{{i._id}}">{{i.nomProduit}}</a></td>
+                                    <td><a href="admin/detail-produit/{{i._id}}">{{i.prixProduit}} DT</a></td>
+                                    <td><a href="admin/detail-produit/{{i._id}}">{{i.remiseProduit}} %</a></td>
+                                    <td><a href="admin/detail-produit/{{i._id}}">{{i.sousCategorie}}</a></td>
+                                    <td><a href="admin/detail-produit/{{i._id}}">{{i.marque}}</a></td>
+                                    <td class="pl-5"><i (click)="spprimer(i._id)" class="fas fa-trash-alt"></i></td>
                                   </tr>
                                 </tbody>
                               </table> 
@@ -119,11 +114,9 @@
                   </div>
                   </div>
               </main>
+              </div>
+              </div>
+              </div>
+              </section>
     </div>
   </div>
-   
-    <!-- offcanvas -->
-  
- 
-  </body>
-</html>

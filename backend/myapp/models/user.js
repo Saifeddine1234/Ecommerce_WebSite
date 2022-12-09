@@ -7,6 +7,7 @@ var dataSchema = new mongoose.Schema({
     adresseUser:String,
     telephoneUser:String,
     mdpUser: String,
+    bloque : String,
 } );
 
 dataSchema.pre('save', function (next) {

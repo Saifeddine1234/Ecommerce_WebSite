@@ -7,6 +7,8 @@ export class User {
         private adresseUser? : String ,
         private telephoneUser? : String ,
         private mdpUser? : String ,
+        private bloque? : String ,
+
     ){
 
     }

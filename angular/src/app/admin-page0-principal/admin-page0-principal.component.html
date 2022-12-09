@@ -1,18 +1,26 @@
 
-<section class="h-100 h-custom" style="background-color: #eee;">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col">      
+          <section class="h-100 h-custom" >
+            <div class="container py-2 h-100">
+              <div class="row d-flex justify-content-center  h-100">
+                <div class="col-12">  
+                <main class="mt-5 pt-3">   
+        <div class="col">  
+          <app-admin-navbar></app-admin-navbar>
+    
   <div  class="col-12 text-center ">
     <img style="width: 80px;height: 80px;"src="/assets/centre-assistance.png">
-    <h1 style="color: brown;font-size: 40px;"><b>Administartion</b></h1>
+    <br>
+
+    <h1 style="font-size: 40px;"><b>Administartion</b></h1>
   <br>
+  <br>
+
 </div>
-          <div class="card">
+          <div class="card" >
             <div class="card-body p-4">
   
-              <div class="row">
-                <div class="col-lg-6 mb-2" >
+              <div class="row" >
+                <div class="col-lg-3 mb-2" >
      
                     <div class="card bg-primary text-white rounded-3">
                <div class="card-body">
@@ -22,42 +30,14 @@
                      <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
                    </svg>
                  </div>
-                 <a href="admin/gerer-categorie" >
+                 <a href="admin/gerer-produit" >
                     <button type="button" class="btn btn-info btn-block btn-lg">
-                        <div class="d-flex justify-content-start">
+                        <div class="d-flex justify-content-center">
                           <span></span>
-                          <span>Gérer les catégories</span>
+                          <span>Gérer <br>les Produits</span>
                         </div>
                       </button>
                  </a>      
-           
-                 <a href="admin/gerer-sous-categorie">
-                    <button type="button" class="btn btn-info btn-block btn-lg">
-                        <div class="d-flex justify-content-start">
-                          <span></span>
-                          <span>Gérer les sous catégories</span>
-                        </div>
-                      </button>
-                 </a>     
-
-                 <a href="admin/gerer-marque" >
-                    <button type="button" class="btn btn-info btn-block btn-lg">
-                        <div class="d-flex justify-content-start">
-                          <span></span>
-                          <span>Gérer les marques</span>
-                        </div>
-                      </button>
-                 </a>     
-
-                 <a href="admin/gerer-produit" >
-                    <button type="button" class="btn btn-info btn-block btn-lg">
-                        <div class="d-flex justify-content-start">
-                          <span></span>
-                          <span>Gérer les produits</span>
-                        </div>
-                      </button>
-                 </a>     
-
                </div>
              </div>
 
@@ -65,9 +45,9 @@
 
 
 
-           <div class="col-lg-6 mb-2" >
+           <div class="col-lg-3 mb-2" >
      
-            <div class="card bg-light text-white rounded-3">
+            <div class="card bg-light text-dark rounded-3">
         <div class="card-body">
          <div class="d-flex justify-content-between align-items-center mb-4">
            <h5 class="mb-0">PUBLICITES</h5>
@@ -76,46 +56,13 @@
            </svg>
          </div>   
          <a href="admin/pub-haut"> 
-         <button type="button" class="btn btn-light btn-block btn-lg">
-           <div class="d-flex justify-content-start">
-             <span></span>
-             <span>Publicités en haut</span>
-           </div>
-         </button>
+          <button type="button" class="btn btn-light btn-block btn-lg">
+            <div class="d-flex justify-content-center">
+              <span></span>
+              <span>Gérer <br>les Publicité</span>
+            </div>
+          </button>
         </a>   
-        <a href="admin/pub-principale"> 
-            <button type="button" class="btn btn-light btn-block btn-lg">
-              <div class="d-flex justify-content-start">
-                <span></span>
-                <span>Publicités principale</span>
-              </div>
-            </button>
-        </a>   
-        <a href="admin/pub-droite"> 
-            <button type="button" class="btn btn-light btn-block btn-lg">
-              <div class="d-flex justify-content-start">
-                <span></span>
-                <span>Publicités à droite</span>
-              </div>
-            </button>
-           </a> 
-           <a href="admin/pub-milieu"> 
-            <button type="button" class="btn btn-light btn-block btn-lg">
-              <div class="d-flex justify-content-start">
-                <span></span>
-                <span>Publicités au milieu</span>
-              </div>
-            </button>
-           </a> 
-        
-           <a href="admin/pub-bas"> 
-            <button type="button" class="btn btn-light btn-block btn-lg">
-              <div class="d-flex justify-content-start">
-                <span></span>
-                <span>Publicités en bas</span>
-              </div>
-            </button>
-           </a> 
         </div>
         </div>
         
@@ -125,7 +72,7 @@
 
 
 
-           <div class="col-lg-6 mb-2" >
+           <div class="col-lg-3 mb-2" >
      
             <div class="card bg-success text-white rounded-3">
        <div class="card-body">
@@ -139,7 +86,7 @@
          <button type="button" class="btn btn-success btn-block btn-lg">
            <div class="d-flex justify-content-start">
              <span></span>
-             <span>List des Commandes</span>
+             <span>Gérer les Commandes</span>
            </div>
          </button>
         </a>   
@@ -154,7 +101,7 @@
 
 
 
-   <div class="col-lg-6 mb-2" >
+   <div class="col-lg-3 mb-2" >
      
     <div class="card bg-warning text-white rounded-3">
 <div class="card-body">
@@ -172,16 +119,116 @@
         </div>
       </button>
  </a> 
+</div>
+</div>
+
+</div>
+
+
+
+
+
+              </div>
+              <div class="row">
+                <div class="col-lg-3 mb-2" >
+     
+                    <div class="card background-color text-dark rounded-3">
+               <div class="card-body">
+                 <div class="d-flex justify-content-between align-items-center mb-4">
+                   <h5 class="mb-0">CATEGORIES</h5>
+                   <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+                     <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+                   </svg>
+                 </div>
+                 <a href="admin/gerer-categorie" >
+                    <button type="button" class="btn btn-outline-dark btn-block btn-lg">
+                        <div class="d-flex justify-content-center">
+                          <span></span>
+                          <span>Gérer <br>les Catégories</span>
+                        </div>
+                      </button>
+                 </a>      
+               </div>
+             </div>
+
+           </div>
+
+
+           <div class="col-lg-3 mb-2" >
+     
+            <div class="card bg-dark text-white rounded-3">
+       <div class="card-body">
+         <div class="d-flex justify-content-between align-items-center mb-4">
+           <h5 class="mb-0">SOUS CATEGORIES</h5>
+           <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+             <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+           </svg>
+         </div>   
+         <a href="admin/gerer-sous-categorie" >
+         <button type="button" class="btn btn-dark btn-block btn-lg">
+           <div class="d-flex justify-content-start">
+             <span></span>
+             <span>Gérer Les Sous Catégories</span>
+           </div>
+         </button>
+        </a>   
+       </div>
+     </div>
+
+   </div>
+
+           <div class="col-lg-3 mb-2" >
+     
+            <div class="card bg-info text-white rounded-3">
+        <div class="card-body">
+         <div class="d-flex justify-content-between align-items-center mb-4">
+           <h5 class="mb-0">STATISTIQUES</h5>
+           <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+             <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+           </svg>
+         </div>   
+         <a href="admin/pub-haut"> 
+          <button type="button" class="btn btn-info btn-block btn-lg">
+            <div class="d-flex justify-content-center">
+              <span></span>
+              <span>Consulter <br>les Statistiques</span>
+            </div>
+          </button>
+        </a>   
+        </div>
+        </div>
+        
+        </div>
+
+
+
+
+
+    
+
+
+
+
+
+
+   <div class="col-lg-3 mb-2" >
+     
+    <div class="card bg-danger text-white rounded-3">
+<div class="card-body">
+ <div class="d-flex justify-content-between align-items-center mb-4">
+   <h5 class="mb-0">ASSISTANCES</h5>
+   <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+     <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+   </svg>
+ </div>    
  <a href="admin/gerer-assistance" >
-    <button type="button" style="color: aliceblue;" class="btn btn-warning btn-block btn-lg">
+    <button type="button" style="color: aliceblue;" class="btn btn-danger btn-block btn-lg">
         <div class="d-flex justify-content-start">
           <span></span>
-          <span>Gérer les assistances</span>
+          <span>Gérer les Assistances</span>
         </div>
       </button>
- </a>     
-
-
+ </a> 
 </div>
 </div>
 
@@ -196,6 +243,9 @@
             </div>
           </div>
         </div>
-      </div>
+   
+    </main>
+    </div>
+    </div>
     </div>
   </section>

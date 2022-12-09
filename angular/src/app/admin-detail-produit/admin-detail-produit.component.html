@@ -1,0 +1,186 @@
+
+      <!-- top navigation bar -->
+      <app-admin-navbar></app-admin-navbar>
+      <!-- top navigation bar -->
+      <div class="row">
+          <div class="col-2">
+              <!-- sidebar -->
+              <app-admin-sidebar></app-admin-sidebar>
+              <!-- sidebar -->
+          </div>
+      
+          <div class="col-10" *ngFor="let i of produits"> 
+            <section class="h-100 h-custom" >
+                <div class="container py-2 h-100">
+                  <div class="row d-flex justify-content-center  h-100">
+                    <div class="col-12">  
+                    <main class="mt-5 pt-3">
+                    <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                          <br>
+                          <h4  class="d-flex justify-content-center" style="font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >Détail Produits</h4>
+                          <br>
+                        </div>
+                      </div>
+              
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="card mb-4">
+                        <div class="card-body text-center">
+                          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                            class="rounded-circle img-fluid" style="width: 150px;">
+                          <h5 class="my-3">{{i.nomProduit}}</h5>
+                          <p class="text-muted mb-1"><s>{{i.prixProduit}} DT </s></p>
+                          <p class="text-muted mb-4">{{produitSolder}} DT</p>
+                          <div class="d-flex justify-content-center mb-2">
+                            <a  href="/admin/detail-produit/{{i._id}}#demo-modal"><button type="button" class="btn btn-primary mr-2" >Modifier</button></a>
+                          <a href="admin/detail-produit/{{i._id}}" *ngIf="i.venteFlash == 'true'" (click)="desactiveVF(i._id)"> <button type="button" class="btn btn-outline-primary ms-1">Désactiver Vente Flash</button></a>
+                          <a href="admin/detail-produit/{{i._id}}" (click)="activeVF(i._id)" *ngIf="(i.venteFlash == 'false' || i.venteFlash == '')&&(i.remiseProduit != '' && i.remiseProduit != '0')"> <button type="button" class="btn btn-outline-dark ms-1">Activer Vente Flash</button></a>
+                          <a href="admin/detail-produit/{{i._id}}#demo-modal2" *ngIf="(i.venteFlash == 'false' || i.venteFlash == '')&&(i.remiseProduit == '' || i.remiseProduit == '0')"> <button type="button" class="btn btn-outline-dark ms-1">Activer Vente Flash</button></a>
+
+                          </div>
+                        </div>
+                      </div>   
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="card mb-4">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Name Produit</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0">{{i.nomProduit}}</p>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">prix Produit</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0">{{i.prixProduit}} DT</p>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">prix Soldé</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0">{{produitSolder}} DT</p>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Catégorie</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0">{{i.categorie}}</p>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Sous Catégorie</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0">{{i.sousCategorie}}</p>
+                            </div>
+                          </div>
+                          <hr>
+
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Marque</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0">{{i.marque}}</p>
+                            </div>
+                          </div>
+                          <hr>
+
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Vente Flash</p>
+                            </div>
+                            <div class="col-sm-9" *ngIf="i.venteFlash == 'true'">
+                                <p class="text-muted mb-0" ><b style="color:rgb(3, 226, 14);">activé</b></p>
+                            </div>
+                            <div class="col-sm-9" *ngIf="i.venteFlash == 'false' || i.venteFlash == ''">
+                                <p class="text-muted mb-0" ><b style="color:rgb(226, 3, 3);">désactivé</b></p>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                   
+                    </div>
+                  </div>
+                </div>
+                </main>
+                </div>
+                </div>
+                </div>
+              </section>
+              <div id="demo-modal" class="modal">
+                <div class="modal__content">
+                     <h4>Modifier le produit</h4> 
+           
+                    <div class="card-body" style="width: 100%;">
+                        <div class="row" style="width: 100%;">
+                                <form style="width: 100%;"   *ngFor="let t of produits" [formGroup]="data2" (ngSubmit)="UpdateItem(t._id , t.sousCategorie)"  >
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Nom de produit</label>
+                                        <input class="form-control" value="{{t.nomProduit}}" formControlName="unomProduit" type="text"   placeholder=" {{t.nomProduit}}" aria-label="default input example">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">prix de produit </label>
+                                        <input class="form-control" type="number" formControlName="uprixProduit"  placeholder="{{t.prixProduit}}" value="{{t.prixProduit}}" aria-label="default input example">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">remise de produit en % </label>
+                                        <input class="form-control" formControlName="uremiseProduit"  placeholder="{{t.remiseProduit}}" value="{{t.remiseProduit}}"  aria-label="default input example">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Sous Categorie</label>
+                                        <select  class="form-control" formControlName="usouscategorie"  id="exampleFormControlSelect1">
+                                          <option *ngFor="let s of msouscategorie" value="{{s.souscategorie}}">{{s.souscategorie}}</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Marque</label>
+                                        <select  class="form-control" formControlName="umarque"  id="exampleFormControlSelect1">
+                                            <option *ngFor="let s of mmarque" value="{{s.marque}}">{{s.marque}}</option>
+                                        </select>
+                                      </div> 
+                                    <br>
+                                    <button type="submit" class="btn btn-dark">modifier</button>
+
+                                  </form>          
+                        </div>
+
+                        </div>
+                  
+                  <a href="/admin/detail-produit/{{i._id}}#close"  class="modal__close">&times;</a>
+              </div>
+            </div>
+            <div id="demo-modal2" class="modal">
+              <div class="modal__content">
+                   <h4>Modifier le Solde en %</h4> 
+                   <form style="width: 100%;"   *ngFor="let t of produits" [formGroup]="data2" (ngSubmit)="VFItem(t._id)"  >
+                    <div class="form-group">
+                        <input class="form-control" value="{{t.remiseProduit}}" formControlName="uremiseProduit" type="text"   placeholder=" {{t.remiseProduit}}" aria-label="default input example">
+                    </div>
+                    <button type="submit" class="btn btn-dark">modifier</button>
+
+                  </form>        
+                
+                
+                <a href="/admin/detail-produit/{{i._id}}#close"  class="modal__close">&times;</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  

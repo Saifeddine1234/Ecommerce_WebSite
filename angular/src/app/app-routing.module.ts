@@ -36,6 +36,9 @@ import { Page16PanierVideComponent } from './page16-panier-vide/page16-panier-vi
 import { Page17SearchComponent } from './page17-search/page17-search.component';
 import { Page18ForgetpasswordComponent } from './page18-forgetpassword/page18-forgetpassword.component';
 import { Page18ResetpasswordComponent } from './page18-resetpassword/page18-resetpassword.component';
+import { AaaaaanewPageComponent } from './aaaaaanew-page/aaaaaanew-page.component';
+import { AdminDetailProduitComponent } from './admin-detail-produit/admin-detail-produit.component';
+import { AdminPage12CommandeComponent } from './admin-page12-commande/admin-page12-commande.component';
 
 
 const routes: Routes = [
@@ -149,6 +152,10 @@ const routes: Routes = [
     component:AdminPage1Component,
   },
   {
+  path: 'saif',
+  component:AaaaaanewPageComponent,
+  },
+  {
     path: 'admin/pub-haut',
     component:AdminPage2PubHautComponent,
   },
@@ -177,6 +184,10 @@ const routes: Routes = [
     component:AdminPage8GererProduitComponent,
   },
   {
+    path: 'admin/detail-produit/:id',
+    component:AdminDetailProduitComponent,
+  },
+  {
     path: 'admin/gerer-sous-categorie',
     component:AdminPage9GererSousCatComponent,
   },
@@ -196,6 +207,11 @@ const routes: Routes = [
     path: 'admin/principal',
     component:AdminPage0PrincipalComponent,
   },
+  {
+    path: 'admin/gerer-commande',
+    component:AdminPage12CommandeComponent,
+  },
+  
 
   
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
